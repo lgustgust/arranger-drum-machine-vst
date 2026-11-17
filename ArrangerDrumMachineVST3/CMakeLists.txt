@@ -23,6 +23,9 @@ juce_add_plugin(ArrangerDrumMachine
     COPY_PLUGIN_AFTER_BUILD TRUE
 )
 
+# Generate JuceHeader.h required by the source files.
+juce_generate_juce_header(ArrangerDrumMachine)
+
 target_sources(ArrangerDrumMachine PRIVATE
     Source/PluginProcessor.cpp
     Source/PluginEditor.cpp)
